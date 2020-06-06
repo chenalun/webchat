@@ -110,9 +110,8 @@ class Webchat extends Command
      * @param $fd
      */
     public function close($server, $fd){
-        $server->push($fd, "client-{$fd} is closed");
         echo "client-{$fd} is closed\n";
-
+        $server->push($fd, "client-{$fd} is closed");
     }
 
 }
