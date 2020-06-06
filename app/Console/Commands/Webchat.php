@@ -38,7 +38,7 @@ class Webchat extends Command
     public function handle()
     {
         //
-        $ws = new Swoole\WebSocket\Server("0.0.0.0", 9503);
+        $ws = new \swoole_websocket_server("0.0.0.0", 9503);
 
         //监听WebSocket连接打开事件
         $ws->on('open', function ($ws, $request) {
